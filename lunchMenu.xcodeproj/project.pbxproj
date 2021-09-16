@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0152918826F3CB80008B2CD6 /* MenuSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0152918726F3CB80008B2CD6 /* MenuSection.swift */; };
+		0152918A26F3D22D008B2CD6 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0152918926F3D22D008B2CD6 /* Menu.swift */; };
 		01B987DF26EEB0A90014AE3D /* lunchMenuApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B987DE26EEB0A90014AE3D /* lunchMenuApp.swift */; };
 		01B987E126EEB0A90014AE3D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B987E026EEB0A90014AE3D /* ContentView.swift */; };
 		01B987E326EEB0AA0014AE3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01B987E226EEB0AA0014AE3D /* Assets.xcassets */; };
@@ -33,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0152918726F3CB80008B2CD6 /* MenuSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSection.swift; sourceTree = "<group>"; };
+		0152918926F3D22D008B2CD6 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		01B987DB26EEB0A90014AE3D /* lunchMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lunchMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01B987DE26EEB0A90014AE3D /* lunchMenuApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lunchMenuApp.swift; sourceTree = "<group>"; };
 		01B987E026EEB0A90014AE3D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -95,11 +99,13 @@
 		01B987DD26EEB0A90014AE3D /* lunchMenu */ = {
 			isa = PBXGroup;
 			children = (
-				01B987DE26EEB0A90014AE3D /* lunchMenuApp.swift */,
 				01B987E026EEB0A90014AE3D /* ContentView.swift */,
+				0152918726F3CB80008B2CD6 /* MenuSection.swift */,
 				01B987E226EEB0AA0014AE3D /* Assets.xcassets */,
+				01B987DE26EEB0A90014AE3D /* lunchMenuApp.swift */,
 				01B987E726EEB0AA0014AE3D /* Info.plist */,
 				01B987E426EEB0AA0014AE3D /* Preview Content */,
+				0152918926F3D22D008B2CD6 /* Menu.swift */,
 			);
 			path = lunchMenu;
 			sourceTree = "<group>";
@@ -260,6 +266,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				01B987E126EEB0A90014AE3D /* ContentView.swift in Sources */,
+				0152918826F3CB80008B2CD6 /* MenuSection.swift in Sources */,
+				0152918A26F3D22D008B2CD6 /* Menu.swift in Sources */,
 				01B987DF26EEB0A90014AE3D /* lunchMenuApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
