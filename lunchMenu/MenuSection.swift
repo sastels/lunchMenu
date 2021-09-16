@@ -7,13 +7,6 @@
 
 import SwiftUI
 
-struct MyButtonStyle: ButtonStyle {
-  func makeBody(configuration: Configuration) -> some View {
-    configuration.label
-      .opacity(configuration.isPressed ? 0.5 : 1.0)
-  }
-}
-
 struct MenuSection: View {
   @EnvironmentObject var menu: Menu
   @State var section: Section
@@ -28,8 +21,14 @@ struct MenuSection: View {
           Button("\(item.name)") {
             menu.toggle(sectionId: section.id, itemId: item.id)
             isOn[index].toggle()
-          }.buttonStyle(MyButtonStyle())
-            .background(index < isOn.count && isOn[index] ? Color.green : Color.white)
+          }.buttonStyle(WhiteButtonStyle())
+            .background(
+              ZStack {
+                RoundedRectangle(cornerRadius: 10, style: .continuous)
+                  .fill(index < isOn.count && isOn[index] ? Color( red: 0.48, green: 0.85, blue: 0.58, opacity: 1.0) : Color.white)//.opacity(0.3)
+                RoundedRectangle(cornerRadius: 10, style: .continuous).strokeBorder(Color.black, lineWidth: 1)
+              }
+            )
         }.font(.title2)
       }
     }.padding()

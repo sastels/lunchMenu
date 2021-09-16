@@ -17,7 +17,7 @@ struct lunchMenuApp: App {
 
     return (
       WindowGroup {
-        ContentView().environmentObject(menu)
+        MenuView().environmentObject(menu)
       }
     )
   }

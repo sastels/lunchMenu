@@ -28,10 +28,13 @@ class Section: Identifiable, ObservableObject {
   }
 }
 
-class Menu: ObservableObject {
+class Menu: ObservableObject, CustomStringConvertible {
+  var description: String
+
   @Published var sections: [Section] = []
 
   init(sections: [Section]) {
+    description = "Menu\n"
     self.sections.append(contentsOf: sections)
   }
 
@@ -41,6 +44,26 @@ class Menu: ObservableObject {
         if section.id == sectionId, item.id == itemId {
           item.chosen.toggle()
         }
+      }
+    }
+    setDescription()
+  }
+  
+  func setDescription() {
+    description = "Menu\n"
+    for section in sections {
+      var firstUse = true
+      for item in section.items {
+        if item.chosen {
+          if firstUse {
+            description += "\(section.name): "
+          }
+          description += "\(item.name) "
+          firstUse = false
+        }
+      }
+      if !firstUse {
+        description += "\n"
       }
     }
   }
