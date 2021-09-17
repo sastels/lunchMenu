@@ -34,7 +34,7 @@ class Menu: ObservableObject, CustomStringConvertible {
   @Published var sections: [Section] = []
 
   init(sections: [Section]) {
-    description = "Menu\n"
+    description = "Ben's Breakfast Order\n"
     self.sections.append(contentsOf: sections)
   }
 
@@ -48,15 +48,18 @@ class Menu: ObservableObject, CustomStringConvertible {
     }
     setDescription()
   }
-  
+
   func setDescription() {
-    description = "Menu\n"
+    description = "Ben's Breakfast Order:\n"
     for section in sections {
       var firstUse = true
       for item in section.items {
         if item.chosen {
           if firstUse {
-            description += "\(section.name): "
+            description += "- "
+          }
+          else {
+            description += ", "
           }
           description += "\(item.name) "
           firstUse = false
