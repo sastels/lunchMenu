@@ -30,7 +30,7 @@ class Section: Identifiable, ObservableObject {
 
 class Menu: ObservableObject, CustomStringConvertible {
   static var shared = Menu(sections: [])
-  
+
   var description: String
   @Published var sections: [Section] = []
 
@@ -51,23 +51,20 @@ class Menu: ObservableObject, CustomStringConvertible {
   }
 
   func setDescription() {
-    description = "Ben's Breakfast Order:\n"
+    description = "Ben's Breakfast Order:"
     for section in sections {
       var firstUse = true
       for item in section.items {
         if item.chosen {
           if firstUse {
-            description += "- "
+            description += "\n- "
           }
           else {
             description += ", "
           }
-          description += "\(item.name) "
+          description += "\(item.name)"
           firstUse = false
         }
-      }
-      if !firstUse {
-        description += "\n"
       }
     }
   }

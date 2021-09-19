@@ -13,13 +13,13 @@ private var subscriptions: Set<AnyCancellable> = []
 
 private var airtableApiKey: String {
   // 1
-  guard let filePath = Bundle.main.path(forResource: "Airtable-Info", ofType: "plist") else {
-    fatalError("Couldn't find file 'Airtable-Info.plist'.")
+  guard let filePath = Bundle.main.path(forResource: "Secrets", ofType: "plist") else {
+    fatalError("Couldn't find file 'Secrets.plist'.")
   }
   // 2
   let plist = NSDictionary(contentsOfFile: filePath)
   guard let value = plist?.object(forKey: "API_KEY") as? String else {
-    fatalError("Couldn't find key 'API_KEY' in 'Airtable-Info.plist'.")
+    fatalError("Couldn't find key 'API_KEY' in 'Secrets.plist'.")
   }
   return value
 }

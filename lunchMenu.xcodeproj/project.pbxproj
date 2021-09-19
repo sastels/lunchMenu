@@ -11,8 +11,8 @@
 		012E186F26F78E2600499A6C /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012E186B26F78E2600499A6C /* Size.swift */; };
 		012E187026F78E2600499A6C /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012E186C26F78E2600499A6C /* Style.swift */; };
 		012E187126F78E2600499A6C /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012E186D26F78E2600499A6C /* Color.swift */; };
-		012E187726F7AF9C00499A6C /* Airtable-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 012E187626F7AF9C00499A6C /* Airtable-Info.plist */; };
-		012E187926F7AFAB00499A6C /* Airtable-Info-Sample.plist in Resources */ = {isa = PBXBuildFile; fileRef = 012E187826F7AFAB00499A6C /* Airtable-Info-Sample.plist */; };
+		012E187726F7AF9C00499A6C /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = 012E187626F7AF9C00499A6C /* Secrets.plist */; };
+		012E187926F7AFAB00499A6C /* Secrets-Sample.plist in Resources */ = {isa = PBXBuildFile; fileRef = 012E187826F7AFAB00499A6C /* Secrets-Sample.plist */; };
 		012E187B26F7B0C600499A6C /* AirtableUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012E187A26F7B0C600499A6C /* AirtableUtils.swift */; };
 		012E187E26F7B3E200499A6C /* AirtableKit in Frameworks */ = {isa = PBXBuildFile; productRef = 012E187D26F7B3E200499A6C /* AirtableKit */; };
 		0152918826F3CB80008B2CD6 /* MenuSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0152918726F3CB80008B2CD6 /* MenuSection.swift */; };
@@ -49,8 +49,8 @@
 		012E186B26F78E2600499A6C /* Size.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
 		012E186C26F78E2600499A6C /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		012E186D26F78E2600499A6C /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		012E187626F7AF9C00499A6C /* Airtable-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Airtable-Info.plist"; sourceTree = "<group>"; };
-		012E187826F7AFAB00499A6C /* Airtable-Info-Sample.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Airtable-Info-Sample.plist"; sourceTree = "<group>"; };
+		012E187626F7AF9C00499A6C /* Secrets.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Secrets.plist; sourceTree = "<group>"; };
+		012E187826F7AFAB00499A6C /* Secrets-Sample.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Secrets-Sample.plist"; sourceTree = "<group>"; };
 		012E187A26F7B0C600499A6C /* AirtableUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirtableUtils.swift; sourceTree = "<group>"; };
 		0152918726F3CB80008B2CD6 /* MenuSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSection.swift; sourceTree = "<group>"; };
 		0152918926F3D22D008B2CD6 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
@@ -140,8 +140,8 @@
 				01B987DE26EEB0A90014AE3D /* lunchMenuApp.swift */,
 				01B987E726EEB0AA0014AE3D /* Info.plist */,
 				01B987E426EEB0AA0014AE3D /* Preview Content */,
-				012E187626F7AF9C00499A6C /* Airtable-Info.plist */,
-				012E187826F7AFAB00499A6C /* Airtable-Info-Sample.plist */,
+				012E187626F7AF9C00499A6C /* Secrets.plist */,
+				012E187826F7AFAB00499A6C /* Secrets-Sample.plist */,
 				012E187A26F7B0C600499A6C /* AirtableUtils.swift */,
 			);
 			path = lunchMenu;
@@ -282,9 +282,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				012E187926F7AFAB00499A6C /* Airtable-Info-Sample.plist in Resources */,
+				012E187926F7AFAB00499A6C /* Secrets-Sample.plist in Resources */,
 				01B987E626EEB0AA0014AE3D /* Preview Assets.xcassets in Resources */,
-				012E187726F7AF9C00499A6C /* Airtable-Info.plist in Resources */,
+				012E187726F7AF9C00499A6C /* Secrets.plist in Resources */,
 				01B987E326EEB0AA0014AE3D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
