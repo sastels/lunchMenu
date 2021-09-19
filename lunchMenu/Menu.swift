@@ -29,8 +29,9 @@ class Section: Identifiable, ObservableObject {
 }
 
 class Menu: ObservableObject, CustomStringConvertible {
+  static var shared = Menu(sections: [])
+  
   var description: String
-
   @Published var sections: [Section] = []
 
   init(sections: [Section]) {

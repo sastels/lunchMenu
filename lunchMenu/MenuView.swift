@@ -10,7 +10,7 @@ import SwiftUI
 struct MenuView: View {
   @EnvironmentObject var menu: Menu
   @State private var showingMail = false
-  
+
   var body: some View {
     return (
       VStack {
@@ -32,6 +32,9 @@ struct MenuView: View {
         MessageComposeView(recipients: ["sastels@gmail.com"], body: "\(menu)") { messageSent in
           print("MessageComposeView with message sent? \(messageSent)")
         }
+      }
+      .onAppear {
+        fetchMenu()
       }
     )
   }
