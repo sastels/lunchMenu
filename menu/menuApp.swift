@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct lunchMenuApp: App {
+struct menuApp: App {
   var body: some Scene {
     let menu = Menu(sections: [])
     Menu.shared = menu

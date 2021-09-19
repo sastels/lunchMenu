@@ -1,5 +1,5 @@
 //
-//  Menu.swift
+//  Model.swift
 //  lunchMenu
 //
 //  Created by Stephen Astels on 2021-09-16.
