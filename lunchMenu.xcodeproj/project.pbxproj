@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,10 @@
 		012E186F26F78E2600499A6C /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012E186B26F78E2600499A6C /* Size.swift */; };
 		012E187026F78E2600499A6C /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012E186C26F78E2600499A6C /* Style.swift */; };
 		012E187126F78E2600499A6C /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012E186D26F78E2600499A6C /* Color.swift */; };
+		012E187726F7AF9C00499A6C /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = 012E187626F7AF9C00499A6C /* Secrets.plist */; };
+		012E187926F7AFAB00499A6C /* Secrets-Sample.plist in Resources */ = {isa = PBXBuildFile; fileRef = 012E187826F7AFAB00499A6C /* Secrets-Sample.plist */; };
+		012E187B26F7B0C600499A6C /* AirtableUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012E187A26F7B0C600499A6C /* AirtableUtils.swift */; };
+		012E187E26F7B3E200499A6C /* AirtableKit in Frameworks */ = {isa = PBXBuildFile; productRef = 012E187D26F7B3E200499A6C /* AirtableKit */; };
 		0152918826F3CB80008B2CD6 /* MenuSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0152918726F3CB80008B2CD6 /* MenuSection.swift */; };
 		0152918A26F3D22D008B2CD6 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0152918926F3D22D008B2CD6 /* Menu.swift */; };
 		0152918C26F3F1B0008B2CD6 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0152918B26F3F1B0008B2CD6 /* Styles.swift */; };
@@ -45,6 +49,9 @@
 		012E186B26F78E2600499A6C /* Size.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
 		012E186C26F78E2600499A6C /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		012E186D26F78E2600499A6C /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		012E187626F7AF9C00499A6C /* Secrets.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Secrets.plist; sourceTree = "<group>"; };
+		012E187826F7AFAB00499A6C /* Secrets-Sample.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Secrets-Sample.plist"; sourceTree = "<group>"; };
+		012E187A26F7B0C600499A6C /* AirtableUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirtableUtils.swift; sourceTree = "<group>"; };
 		0152918726F3CB80008B2CD6 /* MenuSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSection.swift; sourceTree = "<group>"; };
 		0152918926F3D22D008B2CD6 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		0152918B26F3F1B0008B2CD6 /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
@@ -68,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				012E187E26F7B3E200499A6C /* AirtableKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +107,16 @@
 			path = ButtonUtils;
 			sourceTree = "<group>";
 		};
+		012E187F26F7D50500499A6C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0152918D26F4EF64008B2CD6 /* SMSUtils.swift */,
+				012E187A26F7B0C600499A6C /* AirtableUtils.swift */,
+				012E186926F78E2600499A6C /* ButtonUtils */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		01B987D226EEB0A90014AE3D = {
 			isa = PBXGroup;
 			children = (
@@ -122,16 +140,17 @@
 		01B987DD26EEB0A90014AE3D /* lunchMenu */ = {
 			isa = PBXGroup;
 			children = (
-				012E186926F78E2600499A6C /* ButtonUtils */,
+				012E187F26F7D50500499A6C /* Utils */,
 				01B987E026EEB0A90014AE3D /* MenuView.swift */,
 				0152918726F3CB80008B2CD6 /* MenuSection.swift */,
 				0152918926F3D22D008B2CD6 /* Menu.swift */,
-				0152918D26F4EF64008B2CD6 /* SMSUtils.swift */,
 				0152918B26F3F1B0008B2CD6 /* Styles.swift */,
 				01B987E226EEB0AA0014AE3D /* Assets.xcassets */,
 				01B987DE26EEB0A90014AE3D /* lunchMenuApp.swift */,
 				01B987E726EEB0AA0014AE3D /* Info.plist */,
 				01B987E426EEB0AA0014AE3D /* Preview Content */,
+				012E187626F7AF9C00499A6C /* Secrets.plist */,
+				012E187826F7AFAB00499A6C /* Secrets-Sample.plist */,
 			);
 			path = lunchMenu;
 			sourceTree = "<group>";
@@ -178,6 +197,9 @@
 			dependencies = (
 			);
 			name = lunchMenu;
+			packageProductDependencies = (
+				012E187D26F7B3E200499A6C /* AirtableKit */,
+			);
 			productName = lunchMenu;
 			productReference = 01B987DB26EEB0A90014AE3D /* lunchMenu.app */;
 			productType = "com.apple.product-type.application";
@@ -249,6 +271,9 @@
 				Base,
 			);
 			mainGroup = 01B987D226EEB0A90014AE3D;
+			packageReferences = (
+				012E187C26F7B3E200499A6C /* XCRemoteSwiftPackageReference "AirtableKit" */,
+			);
 			productRefGroup = 01B987DC26EEB0A90014AE3D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -265,7 +290,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				012E187926F7AFAB00499A6C /* Secrets-Sample.plist in Resources */,
 				01B987E626EEB0AA0014AE3D /* Preview Assets.xcassets in Resources */,
+				012E187726F7AF9C00499A6C /* Secrets.plist in Resources */,
 				01B987E326EEB0AA0014AE3D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,6 +321,7 @@
 				012E186F26F78E2600499A6C /* Size.swift in Sources */,
 				01B987E126EEB0A90014AE3D /* MenuView.swift in Sources */,
 				0152918E26F4EF64008B2CD6 /* SMSUtils.swift in Sources */,
+				012E187B26F7B0C600499A6C /* AirtableUtils.swift in Sources */,
 				012E187126F78E2600499A6C /* Color.swift in Sources */,
 				0152918C26F3F1B0008B2CD6 /* Styles.swift in Sources */,
 				0152918826F3CB80008B2CD6 /* MenuSection.swift in Sources */,
@@ -620,6 +648,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		012E187C26F7B3E200499A6C /* XCRemoteSwiftPackageReference "AirtableKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "http://github.com/appledeveloperacademypucrs/AirtableKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		012E187D26F7B3E200499A6C /* AirtableKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 012E187C26F7B3E200499A6C /* XCRemoteSwiftPackageReference "AirtableKit" */;
+			productName = AirtableKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 01B987D326EEB0A90014AE3D /* Project object */;
 }

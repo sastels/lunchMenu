@@ -10,7 +10,7 @@ import SwiftUI
 struct MenuView: View {
   @EnvironmentObject var menu: Menu
   @State private var showingMail = false
-  
+
   var body: some View {
     return (
       VStack {
@@ -24,14 +24,16 @@ struct MenuView: View {
           print(menu)
           showingMail = true
         }.buttonStyle(CustomButtonStyle(.rounded(type: .primary), size: .large, isFullWidth: true))
-        Spacer(minLength: 100)
       }
-      .padding(64)
+      .padding(32)
       .font(/*@START_MENU_TOKEN@*/ .title/*@END_MENU_TOKEN@*/)
       .sheet(isPresented: $showingMail) {
         MessageComposeView(recipients: ["sastels@gmail.com"], body: "\(menu)") { messageSent in
           print("MessageComposeView with message sent? \(messageSent)")
         }
+      }
+      .onAppear {
+        fetchMenu()
       }
     )
   }

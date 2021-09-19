@@ -10,10 +10,8 @@ import SwiftUI
 @main
 struct lunchMenuApp: App {
   var body: some Scene {
-    let menu = Menu(sections:
-      [Section(name: "Cereal", items: [Item("Cheerios"), Item("Granola")]),
-       Section(name: "Bread", items: [Item("Toast"), Item("Bagel"), Item("English muffin")]),
-       Section(name: "Drink", items: [Item("Juice"), Item("Water"), Item("Milk")])])
+    let menu = Menu(sections: [])
+    Menu.shared = menu
 
     return (
       WindowGroup {
