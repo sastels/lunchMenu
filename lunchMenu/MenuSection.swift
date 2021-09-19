@@ -34,9 +34,7 @@ struct MenuSection: View {
 
 struct MenuSection_Previews: PreviewProvider {
   @State static var menu = Menu(sections:
-    [Section(name: "Cereal", items: [Item("Cheerios"), Item("Granola")]),
-     Section(name: "Bread", items: [Item("Toast"), Item("Bagel"), Item("English muffin")]),
-     Section(name: "Drink", items: [Item("Juice"), Item("Water"), Item("Milk")])])
+    [Section(name: "Cereal", items: [Item("Cheerios"), Item("Granola")])])
 
   static var previews: some View {
     menu.sections[0].items[0].chosen = true

@@ -29,23 +29,32 @@ private var airtable: Airtable {
 }
 
 /// A publisher that lists the items from Airtable
-private var listFromAirtablePublisher: AnyPublisher<AirtableKit.Record, AirtableError> {
+// private var listFromAirtablePublisher: AnyPublisher<AirtableKit.Record, AirtableError> {
+//  airtable
+//    .list(tableName: "Breakfast", fields: ["Cereal", "Bread", "Drink"])
+//    .receive(on: DispatchQueue.main)
+//    .compactMap(\.first)
+//    .eraseToAnyPublisher()
+// }
+
+private var getFromAirtablePublisher: AnyPublisher<AirtableKit.Record, AirtableError> {
   airtable
-    .list(tableName: "Breakfast", fields: ["Cereal", "Bread", "Drink"])
+    .get(tableName: "Breakfast", recordID: "rec2NDkF4EGb1iMnE")
     .receive(on: DispatchQueue.main)
-    .compactMap(\.first)
     .eraseToAnyPublisher()
 }
 
 private func update(with record: AirtableKit.Record) {
-  Menu.shared.sections = record.fields.map {
-    key, value in
-    Section(name: key, items: (value as! [String]).map { Item($0) })
-  }
+  Menu.shared.sections = record.fields
+    .filter { key, _ in key != "Code" }
+    .map {
+      key, value in
+      Section(name: key, items: (value as! [String]).map { Item($0) })
+    }
 }
 
 func fetchMenu() {
-  listFromAirtablePublisher
+  getFromAirtablePublisher
     .replaceError(with: .init(fields: [:]))
     .sink(receiveValue: update(with:))
     .store(in: &subscriptions)

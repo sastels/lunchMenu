@@ -107,6 +107,16 @@
 			path = ButtonUtils;
 			sourceTree = "<group>";
 		};
+		012E187F26F7D50500499A6C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0152918D26F4EF64008B2CD6 /* SMSUtils.swift */,
+				012E187A26F7B0C600499A6C /* AirtableUtils.swift */,
+				012E186926F78E2600499A6C /* ButtonUtils */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		01B987D226EEB0A90014AE3D = {
 			isa = PBXGroup;
 			children = (
@@ -130,11 +140,10 @@
 		01B987DD26EEB0A90014AE3D /* lunchMenu */ = {
 			isa = PBXGroup;
 			children = (
-				012E186926F78E2600499A6C /* ButtonUtils */,
+				012E187F26F7D50500499A6C /* Utils */,
 				01B987E026EEB0A90014AE3D /* MenuView.swift */,
 				0152918726F3CB80008B2CD6 /* MenuSection.swift */,
 				0152918926F3D22D008B2CD6 /* Menu.swift */,
-				0152918D26F4EF64008B2CD6 /* SMSUtils.swift */,
 				0152918B26F3F1B0008B2CD6 /* Styles.swift */,
 				01B987E226EEB0AA0014AE3D /* Assets.xcassets */,
 				01B987DE26EEB0A90014AE3D /* lunchMenuApp.swift */,
@@ -142,7 +151,6 @@
 				01B987E426EEB0AA0014AE3D /* Preview Content */,
 				012E187626F7AF9C00499A6C /* Secrets.plist */,
 				012E187826F7AFAB00499A6C /* Secrets-Sample.plist */,
-				012E187A26F7B0C600499A6C /* AirtableUtils.swift */,
 			);
 			path = lunchMenu;
 			sourceTree = "<group>";
