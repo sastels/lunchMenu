@@ -38,27 +38,10 @@ private var listFromAirtablePublisher: AnyPublisher<AirtableKit.Record, Airtable
 }
 
 private func update(with record: AirtableKit.Record) {
-  let cereal: [String] = record.Cereal ?? []
-  let bread: [String] = record.Bread ?? []
-  let drink: [String] = record.Drink ?? []
-
-  print("cereal: \(cereal)")
-  print("bread: \(bread)")
-  print("drink: \(drink)")
-
-  Menu.shared.sections =
-    [Section(name: "Cereal", items: cereal.map { Item($0) }),
-     Section(name: "Bread", items: bread.map { Item($0) }),
-     Section(name: "Drink", items: drink.map { Item($0) })]
-
-//  print("\(record.Cereal)")
-//       self.record = record
-//       self.state.name = record.name ?? ""
-//       self.state.age = record.age ?? 0
-//       self.state.isCool = record.isCool ?? false
-//       self.state.createdTime = record.createdTime ?? Date()
-//       self.state.updatedTime = record.updatedTime ?? Date()
-//       self.state.imageUrl = record.attachments["image"]?.first?.url ?? URL(string: AppState.placeholderStringUrl)!
+  Menu.shared.sections = record.fields.map {
+    key, value in
+    Section(name: key, items: (value as! [String]).map { Item($0) })
+  }
 }
 
 func fetchMenu() {
