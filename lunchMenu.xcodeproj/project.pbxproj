@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		012E186E26F78E2600499A6C /* CustomButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012E186A26F78E2600499A6C /* CustomButtonStyle.swift */; };
+		012E186F26F78E2600499A6C /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012E186B26F78E2600499A6C /* Size.swift */; };
+		012E187026F78E2600499A6C /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012E186C26F78E2600499A6C /* Style.swift */; };
+		012E187126F78E2600499A6C /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012E186D26F78E2600499A6C /* Color.swift */; };
 		0152918826F3CB80008B2CD6 /* MenuSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0152918726F3CB80008B2CD6 /* MenuSection.swift */; };
 		0152918A26F3D22D008B2CD6 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0152918926F3D22D008B2CD6 /* Menu.swift */; };
 		0152918C26F3F1B0008B2CD6 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0152918B26F3F1B0008B2CD6 /* Styles.swift */; };
@@ -37,6 +41,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		012E186A26F78E2600499A6C /* CustomButtonStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButtonStyle.swift; sourceTree = "<group>"; };
+		012E186B26F78E2600499A6C /* Size.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
+		012E186C26F78E2600499A6C /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
+		012E186D26F78E2600499A6C /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		0152918726F3CB80008B2CD6 /* MenuSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSection.swift; sourceTree = "<group>"; };
 		0152918926F3D22D008B2CD6 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		0152918B26F3F1B0008B2CD6 /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
@@ -80,6 +88,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		012E186926F78E2600499A6C /* ButtonUtils */ = {
+			isa = PBXGroup;
+			children = (
+				012E186A26F78E2600499A6C /* CustomButtonStyle.swift */,
+				012E186B26F78E2600499A6C /* Size.swift */,
+				012E186C26F78E2600499A6C /* Style.swift */,
+				012E186D26F78E2600499A6C /* Color.swift */,
+			);
+			path = ButtonUtils;
+			sourceTree = "<group>";
+		};
 		01B987D226EEB0A90014AE3D = {
 			isa = PBXGroup;
 			children = (
@@ -103,15 +122,16 @@
 		01B987DD26EEB0A90014AE3D /* lunchMenu */ = {
 			isa = PBXGroup;
 			children = (
+				012E186926F78E2600499A6C /* ButtonUtils */,
 				01B987E026EEB0A90014AE3D /* MenuView.swift */,
 				0152918726F3CB80008B2CD6 /* MenuSection.swift */,
+				0152918926F3D22D008B2CD6 /* Menu.swift */,
+				0152918D26F4EF64008B2CD6 /* SMSUtils.swift */,
+				0152918B26F3F1B0008B2CD6 /* Styles.swift */,
 				01B987E226EEB0AA0014AE3D /* Assets.xcassets */,
 				01B987DE26EEB0A90014AE3D /* lunchMenuApp.swift */,
 				01B987E726EEB0AA0014AE3D /* Info.plist */,
 				01B987E426EEB0AA0014AE3D /* Preview Content */,
-				0152918926F3D22D008B2CD6 /* Menu.swift */,
-				0152918B26F3F1B0008B2CD6 /* Styles.swift */,
-				0152918D26F4EF64008B2CD6 /* SMSUtils.swift */,
 			);
 			path = lunchMenu;
 			sourceTree = "<group>";
@@ -271,11 +291,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				012E186F26F78E2600499A6C /* Size.swift in Sources */,
 				01B987E126EEB0A90014AE3D /* MenuView.swift in Sources */,
 				0152918E26F4EF64008B2CD6 /* SMSUtils.swift in Sources */,
+				012E187126F78E2600499A6C /* Color.swift in Sources */,
 				0152918C26F3F1B0008B2CD6 /* Styles.swift in Sources */,
 				0152918826F3CB80008B2CD6 /* MenuSection.swift in Sources */,
 				0152918A26F3D22D008B2CD6 /* Menu.swift in Sources */,
+				012E186E26F78E2600499A6C /* CustomButtonStyle.swift in Sources */,
+				012E187026F78E2600499A6C /* Style.swift in Sources */,
 				01B987DF26EEB0A90014AE3D /* lunchMenuApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

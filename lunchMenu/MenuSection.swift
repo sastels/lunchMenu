@@ -18,17 +18,11 @@ struct MenuSection: View {
       HStack {
         ForEach(section.items.indices) { index in
           let item = section.items[index]
+
           Button("\(item.name)") {
             menu.toggle(sectionId: section.id, itemId: item.id)
             isOn[index].toggle()
-          }.buttonStyle(WhiteButtonStyle())
-            .background(
-              ZStack {
-                RoundedRectangle(cornerRadius: 10, style: .continuous)
-                  .fill(index < isOn.count && isOn[index] ? Color( red: 0.48, green: 0.85, blue: 0.58, opacity: 1.0) : Color.white)//.opacity(0.3)
-                RoundedRectangle(cornerRadius: 10, style: .continuous).strokeBorder(Color.black, lineWidth: 1)
-              }
-            )
+          }.buttonStyle(CustomButtonStyle(.default(type: index < isOn.count && isOn[index] ? .success : .light)))
         }.font(.title2)
       }
     }.padding()
